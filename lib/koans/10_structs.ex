@@ -9,17 +9,17 @@ defmodule Structs do
 
   koan "Structs are defined and named after a module" do
     person = %Person{}
-    assert person == ___
+    assert person == %Person{age: nil, name: nil}
   end
 
   koan "Unless previously defined, fields begin as nil" do
     nobody = %Person{}
-    assert nobody.age == ___
+    assert nobody.age == nil
   end
 
   koan "You can pass initial values to structs" do
     joe = %Person{name: "Joe", age: 23}
-    assert joe.name == ___
+    assert joe.name == "Joe"
   end
 
   koan "Update fields with the cons '|' operator" do
